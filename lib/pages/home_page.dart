@@ -32,27 +32,6 @@ class HomePage extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
             const Padding(padding: EdgeInsets.only(top: 10)),
-            ElevatedButton.icon(
-              style: const ButtonStyle(
-                  padding: WidgetStatePropertyAll(EdgeInsets.all(15)),
-                  backgroundColor: WidgetStatePropertyAll(Colors.green)
-              ),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  PageRouteBuilder(
-                      pageBuilder: (_, __, ___) => const EventPage()
-                  ),
-                );
-              },
-              label: const Text("Afficher le planning",
-                style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.white
-                ),
-              ),
-              icon: const Icon(Icons.calendar_month),
-            ),
           ],
         )
     );
