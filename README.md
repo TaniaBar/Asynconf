@@ -1,16 +1,16 @@
-# Cours_Graven_Développement
+# First exercise with Android Studio and Flutter
 
-A new Flutter project.
 
-## Getting Started
+![Screenshot 1](./assets/images/Tuto_List.png)
+![Screenshot 2](./assets/images/Tuto_Form.png)
 
-This project is a starting point for a Flutter application.
+## Introduction
 
-A few resources to get you started if this is your first Flutter project:
+This project is a starting point for Flutter application development. Following the Graven-Développement tutorial, I created my first basic app with Android Studio and Flutter. I built a site for Android and IOS that lists conferences and includes a form to add new ones. For the database, I used Firebase's Firestore.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Before starting, I installed:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Flutter SDK
+- Dart SDK
+- Android Studio
+- A Firebase account to use Firestore
