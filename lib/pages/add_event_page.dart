@@ -94,7 +94,9 @@ class _AddEventPageState extends State<AddEventPage> {
                   suffixIcon: Icon(Icons.event_note),
                   labelText: 'Choisir une date',
                 ),
-                mode: DateTimeFieldPickerMode.time,
+                firstDate: DateTime.now().add(const Duration(days: 10)),
+                lastDate: DateTime.now().add(const Duration(days: 40)),
+                initialPickerDateTime: DateTime.now().add(const Duration(days: 20)),
                 autovalidateMode: AutovalidateMode.always,
                 validator: (e) => (e?.day ?? 0) == 1 ? 'Please not the first day' : null,
                 onChanged: (DateTime? value) {
