@@ -2,8 +2,19 @@ import 'package:cours_electron_midali/pages/add_event_page.dart';
 import 'package:cours_electron_midali/pages/event_page.dart';
 import 'package:cours_electron_midali/pages/home_page.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
-void main() {
+void main() async {
+
+  //pour etre sur que les dependences son ok sur l'appli au lancement de l'appli
+  WidgetsFlutterBinding.ensureInitialized();
+
+  //il va reconnaitre le dispositif du client(android, ios)
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
   runApp(const MyApp());
 }
 

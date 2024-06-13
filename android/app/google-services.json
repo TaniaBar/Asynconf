@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "178839919035",
+    "project_id": "asynconf-3a9a5",
+    "storage_bucket": "asynconf-3a9a5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:178839919035:android:e7749d7a263110bc408c9e",
+        "android_client_info": {
+          "package_name": "com.nana.test"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8_YRG7hOV6fh_3LQzf3W0V2YM3JzODRs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
