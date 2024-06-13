@@ -86,24 +86,27 @@ class _AddEventPageState extends State<AddEventPage> {
                     }
                 ),
               ),
-              DateTimeFormField(
-                decoration: const InputDecoration(
-                 hintStyle: TextStyle(color: Colors.black45),
-                  errorStyle: TextStyle(color: Colors.redAccent),
-                  border: OutlineInputBorder(),
-                  suffixIcon: Icon(Icons.event_note),
-                  labelText: 'Choisir une date',
+              Container(
+                margin: const EdgeInsets.only(bottom: 10),
+                child: DateTimeFormField(
+                  decoration: const InputDecoration(
+                   hintStyle: TextStyle(color: Colors.black45),
+                    errorStyle: TextStyle(color: Colors.redAccent),
+                    border: OutlineInputBorder(),
+                    suffixIcon: Icon(Icons.event_note),
+                    labelText: 'Choisir une date',
+                  ),
+                  firstDate: DateTime.now().add(const Duration(days: 10)),
+                  lastDate: DateTime.now().add(const Duration(days: 40)),
+                  initialPickerDateTime: DateTime.now().add(const Duration(days: 20)),
+                  autovalidateMode: AutovalidateMode.always,
+                  validator: (e) => (e?.day ?? 0) == 1 ? 'Please not the first day' : null,
+                  onChanged: (DateTime? value) {
+                    setState(() {
+                      selectedDate = value;
+                    });
+                  },
                 ),
-                firstDate: DateTime.now().add(const Duration(days: 10)),
-                lastDate: DateTime.now().add(const Duration(days: 40)),
-                initialPickerDateTime: DateTime.now().add(const Duration(days: 20)),
-                autovalidateMode: AutovalidateMode.always,
-                validator: (e) => (e?.day ?? 0) == 1 ? 'Please not the first day' : null,
-                onChanged: (DateTime? value) {
-                  setState(() {
-                    selectedDate = value;
-                  });
-                },
               ),
               SizedBox(
                 width: double.infinity,
