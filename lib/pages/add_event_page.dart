@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:date_field/date_field.dart';
 import 'package:flutter/material.dart';
 
@@ -122,10 +123,22 @@ class _AddEventPageState extends State<AddEventPage> {
                         );
                         FocusScope.of(context).requestFocus(FocusNode());
 
-                        print("Ajout de la conf $confName par le speaker $speakerName");
-                        print("Type de conférence $selectedConfType");
-                        print("Date de la conf $selectedDate");
+                        //ajout dans la base de données
+                        CollectionReference eventsRef = FirebaseFirestore.instance.collection("Events");
+                          try {
+                            eventsRef.add({
+                              'speaker': speakerName,
+                              'date': selectedDate,
+                              'subject': confName,
+                              'type': selectedConfType,
+                              'avatar': 'chairs'
+                            });
+                            print('add data ok on Firestore!');
+                          } catch (e) {
+                            print('error add data on firestore!');
+                          }
                       }
+
                     },
                     child: const Text('Envoyer')
                 ),
